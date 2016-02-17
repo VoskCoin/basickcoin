@@ -161,6 +161,7 @@ public:
         vSeeds.push_back(CDNSSeedData("xurious.com", "dnsseed.ltc.xurious.com"));
         vSeeds.push_back(CDNSSeedData("koin-project.com", "dnsseed.koin-project.com"));
         vSeeds.push_back(CDNSSeedData("weminemnc.com", "dnsseed.weminemnc.com"));
+        vSeeds.push_back(CDNSSeedData("loshan.co.uk", "seed-a.litecoin.loshan.co.uk"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(48);
         base58Prefixes[SCRIPT_ADDRESS] = list_of(5);

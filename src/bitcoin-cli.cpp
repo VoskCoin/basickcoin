@@ -67,7 +67,7 @@ static bool AppInitRPC(int argc, char* argv[])
     //
     ParseParameters(argc, argv);
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-h") || mapArgs.count("-help") || mapArgs.count("-version")) {
-        std::string strUsage = _("Litcoin Core RPC client version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("Litecoin Core RPC client version") + " " + FormatFullVersion() + "\n";
         if (!mapArgs.count("-version")) {
             strUsage += "\n" + _("Usage:") + "\n" +
                   "  litecoin-cli [options] <command> [params]  " + _("Send command to Litecoin Core") + "\n" +

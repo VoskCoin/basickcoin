@@ -106,7 +106,7 @@ public:
     CMainParams() {
         networkID = CBaseChainParams::MAIN;
         strNetworkID = "main";
-        /** 
+        /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
@@ -130,7 +130,7 @@ public:
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
          * be spent as it did not originally exist in the database.
-         * 
+         *
          * CBlock(hash=000000000019d6, ver=1, hashPrevBlock=00000000000000, hashMerkleRoot=4a5e1e, nTime=1231006505, nBits=1d00ffff, nNonce=2083236893, vtx=1)
          *   CTransaction(hash=4a5e1e, ver=1, vin.size=1, vout.size=1, nLockTime=0)
          *     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73)
@@ -163,11 +163,11 @@ public:
         vSeeds.push_back(CDNSSeedData("weminemnc.com", "dnsseed.weminemnc.com"));
         vSeeds.push_back(CDNSSeedData("loshan.co.uk", "seed-a.litecoin.loshan.co.uk"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of(48);
-        base58Prefixes[SCRIPT_ADDRESS] = list_of(5);
-        base58Prefixes[SECRET_KEY] =     list_of(176);
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E);
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4);
+        base58Prefixes[PUBKEY_ADDRESS] = {48};
+        base58Prefixes[SCRIPT_ADDRESS] = {5};
+        base58Prefixes[SECRET_KEY] = {176};
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xb2, 0x1e};
+        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xad, 0xe4};
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
@@ -184,7 +184,7 @@ public:
         nEnforceV2AfterHeight = 710000;
     }
 
-    const Checkpoints::CCheckpointData& Checkpoints() const 
+    const Checkpoints::CCheckpointData& Checkpoints() const
     {
         return data;
     }
@@ -225,11 +225,11 @@ public:
         vSeeds.push_back(CDNSSeedData("xurious.com", "testnet-seed.ltc.xurious.com"));
         vSeeds.push_back(CDNSSeedData("wemine-testnet.com", "dnsseed.wemine-testnet.com"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of(111);
-        base58Prefixes[SCRIPT_ADDRESS] = list_of(196);
-        base58Prefixes[SECRET_KEY]     = list_of(239);
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x35)(0x87)(0xCF);
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x35)(0x83)(0x94);
+        base58Prefixes[PUBKEY_ADDRESS] = {111};
+        base58Prefixes[SCRIPT_ADDRESS] = {196};
+        base58Prefixes[SECRET_KEY] = {239};
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xcf};
+        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
 
@@ -244,7 +244,7 @@ public:
         // Litecoin: Testnet v2 enforced as of block 400k
         nEnforceV2AfterHeight = 400000;
     }
-    const Checkpoints::CCheckpointData& Checkpoints() const 
+    const Checkpoints::CCheckpointData& Checkpoints() const
     {
         return dataTestnet;
     }
@@ -293,7 +293,7 @@ public:
         // Litecoin: v2 enforced using Bitcoin's supermajority rule
         nEnforceV2AfterHeight = -1;
     }
-    const Checkpoints::CCheckpointData& Checkpoints() const 
+    const Checkpoints::CCheckpointData& Checkpoints() const
     {
         return dataRegtest;
     }
@@ -322,7 +322,7 @@ public:
         nEnforceV2AfterHeight = -1;
     }
 
-    const Checkpoints::CCheckpointData& Checkpoints() const 
+    const Checkpoints::CCheckpointData& Checkpoints() const
     {
         // UnitTest share the same checkpoints as MAIN
         return data;

@@ -2552,19 +2552,19 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
     if (pcheckpoint && nHeight < pcheckpoint->nHeight)
         return state.DoS(100, error("%s : forked chain older than last checkpoint (height %d)", __func__, nHeight));
 
-    // Litecoin: Reject block.nVersion=1 blocks (mainnet >= 710000, testnet >= 400000, regtest uses supermajority)
+    // Litecoin: Reject block.nVersion=1 blocks (mainnet >= 710000, testnet & regtest uses supermajority)
     bool enforceV2 = false;
     if (block.nVersion < 2)
     {
         if (Params().EnforceV2AfterHeight() != -1)
         {
-            // Mainnet 710k, Testnet 400k
+            // Mainnet 710k
             if (nHeight >= Params().EnforceV2AfterHeight())
                 enforceV2 = true;
         }
         else
         {
-            // Regtest and Unittest: use Bitcoin's supermajority rule
+            // Testnet, Regtest and Unittest: use Bitcoin's supermajority rule
             if (CBlockIndex::IsSuperMajority(2, pindexPrev, Params().RejectBlockOutdatedMajority()))
                 enforceV2 = true;
         }

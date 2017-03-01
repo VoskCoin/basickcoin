@@ -81,12 +81,12 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
         boost::assign::map_list_of
-        ( 546, uint256("0xa0fea99a6897f531600c8ae53367b126824fd6a847b2b2b73817a95b8e27e602"))
+        ( 2056, uint256("0x17748a31ba97afdc9a4f86837a39d287e3e7c7290a08a1d816c5969c78a83289"))
         ;
 static const Checkpoints::CCheckpointData dataTestnet = {
         &mapCheckpointsTestnet,
-        1365458829,
-        547,
+        1487715270,
+        8731,
         576
     };
 
@@ -199,12 +199,12 @@ public:
     CTestNetParams() {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0xfc;
-        pchMessageStart[1] = 0xc1;
-        pchMessageStart[2] = 0xb7;
-        pchMessageStart[3] = 0xdc;
+        pchMessageStart[0] = 0xfd;
+        pchMessageStart[1] = 0xd2;
+        pchMessageStart[2] = 0xc8;
+        pchMessageStart[3] = 0xf1;
         vAlertPubKey = ParseHex("0449623fc74489a947c4b15d579115591add020e53b3490bf47297dfa3762250625f8ecc2fb4fc59f69bdce8f7080f3167808276ed2c79d297054367566038aa82");
-        nDefaultPort = 19333;
+        nDefaultPort = 19335;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -214,16 +214,15 @@ public:
         nMaxTipAge = 0x7fffffff;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1317798646;
-        genesis.nNonce = 385270584;
+        genesis.nTime = 1486949366;
+        genesis.nNonce = 293345;
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0xf5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f"));
+        assert(hashGenesisBlock == uint256("0x4966625a4b2851d9fdee139e56211a0d88575f59ed816ff5e6a63deb4e3e29a0"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
         vSeeds.push_back(CDNSSeedData("litecointools.com", "testnet-seed.litecointools.com"));
-        vSeeds.push_back(CDNSSeedData("xurious.com", "testnet-seed.ltc.xurious.com"));
-        vSeeds.push_back(CDNSSeedData("wemine-testnet.com", "dnsseed.wemine-testnet.com"));
+        vSeeds.push_back(CDNSSeedData("loshan.co.uk", "seed-b.litecoin.loshan.co.uk"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
@@ -241,8 +240,8 @@ public:
         fMineBlocksOnDemand = false;
         fTestnetToBeDeprecatedFieldRPC = true;
 
-        // Litecoin: Testnet v2 enforced as of block 400k
-        nEnforceV2AfterHeight = 400000;
+        // Litecoin: v2 enforced using Bitcoin's supermajority rule
+        nEnforceV2AfterHeight = -1;
     }
     const Checkpoints::CCheckpointData& Checkpoints() const 
     {

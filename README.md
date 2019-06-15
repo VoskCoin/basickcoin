@@ -3,7 +3,7 @@ bASICKcoin Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/VoskCoin/bASICKcoin.svg?branch=master)](https://travis-ci.org/VoskCoin/bASICKcoin)
 
-https://litecoin.org
+https://asickcoin.com/basickcoin
 
 What is bASICKcoin?
 ----------------
@@ -15,7 +15,7 @@ out collectively by the network. bASICKcoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the bASICKcoin Core software, see [https://litecoin.org](https://litecoin.org).
+the bASICKcoin Core software, see [https://asickcoin.com/basickcoin](https://asickcoin.com/basickcoin).
 
 License
 -------

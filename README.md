@@ -32,7 +32,6 @@ regularly to indicate new official, stable release versions of bASICKcoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-
 Testing
 -------
 

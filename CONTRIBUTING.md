@@ -18,8 +18,7 @@ Communication Channels
 ----------------------
 
 Most communication about bASICKcoin Core development happens on Discord, in the
-VoskCoin Discord server.
-with the web client, [https://discord.gg/Gs87dfr](https://discord.gg/Gs87dfr).
+VoskCoin Discord server. [https://discord.gg/Gs87dfr](VoskCoin Discord invite link).
 
 Discussion about code base improvements happens in GitHub issues and on pull
 requests.

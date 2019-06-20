@@ -3,7 +3,7 @@ bASICKcoin Core version 0.1 is now available from:
   <TBD>
 
 This is a buggy prototype version release, bringing new bugs and less features.
-It is not recommended to upgrade to this version.
+It is not recommended to run to this version.
 
 Please report bugs using the issue tracker at github:
 
